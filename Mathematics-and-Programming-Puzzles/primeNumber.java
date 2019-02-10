@@ -10,7 +10,7 @@ class primeNumber {
 		int testCases = scan.nextInt();
 		for(int i = 0; i<testCases; i++){
 		    int number = scan.nextInt();
-		    int flag = 0;
+		    int flag = 1;
 		    for(int j = 2; j<number; j++){
 		        if(number%j==0){
 		            flag = 0;
