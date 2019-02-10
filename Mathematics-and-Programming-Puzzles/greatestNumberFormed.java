@@ -63,9 +63,18 @@ class greatestNumberFormed
 		double[] arrayOfRightElements = new double[limitOfArray];
            	int k = 0;
 		for(int j = 0; j<limitOfArray; j++){
-			array[j]=scan.nextLong();
+			double number = scan.nextLong();
+			if(isPrime(number) == 0 ){
+			if(Math.sqrt(number)-(int)Math.sqrt(number)==0){
+				if(isPrime(Math.sqrt(number)) == 1){
+		            		arrayOfRightElements[k] = number;
+			   		 k++;
+				}
+			}
+	            }
+			//array[j]=scan.nextLong();
 		}
-		for(int j = 0; j<limitOfArray; j++){
+		/*for(int j = 0; j<limitOfArray; j++){
 		    if(isPrime(array[j]) == 0 ){
 			if(Math.sqrt(array[j])-(int)Math.sqrt(array[j])==0){
 				if(isPrime(Math.sqrt(array[j])) == 1){
@@ -74,7 +83,7 @@ class greatestNumberFormed
 				}
 			}
 	            }
-		}
+		}*/
 		
 		for(int j = 0; j<k; j++){
 		     System.out.println((int)arrayOfRightElements[j]);
